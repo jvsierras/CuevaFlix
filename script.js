@@ -63,7 +63,7 @@ function openPlayerWithInfo(movieDetails) {
     `;
 
     // Simulamos un enlace de video (reemplaza con tu fuente real)
-    const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Ejemplo de URL de YouTube
+    const videoUrl = "https://short.icu/RvsOdlEUl"; // Ejemplo de URL de YouTube
     videoPlayer.src = videoUrl; // Actualizamos el iframe
 
     // Mostrar la ventana modal
