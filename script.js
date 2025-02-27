@@ -32,7 +32,7 @@ function displayMovies(movies) {
             <p>${movie.title}</p>
         `;
         // Simulamos un enlace de video (reemplaza con tu fuente real)
-        movieDiv.addEventListener("click", () => openPlayer("https://www.w3schools.com/html/mov_bbb.mp4"));
+        movieDiv.addEventListener("click", () => openPlayer("https://short.icu/RvsOdlEUl"));
         featuredMovies.appendChild(movieDiv);
     });
 }
