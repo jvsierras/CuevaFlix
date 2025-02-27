@@ -7,7 +7,7 @@ const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const featuredMovies = document.getElementById("featured-movies");
 const searchInput = document.getElementById("search");
 const playerModal = document.getElementById("player-modal");
-const videoPlayer = document.getElementById("video-player");
+const videoPlayer = document.getElementById("video-player"); // Ahora es un iframe
 const closePlayer = document.getElementById("close-player");
 const movieInfoContainer = document.getElementById("movie-info");
 
@@ -63,9 +63,8 @@ function openPlayerWithInfo(movieDetails) {
     `;
 
     // Simulamos un enlace de video (reemplaza con tu fuente real)
-    const videoUrl = "https://short.icu/RvsOdlEUl";
-    videoPlayer.querySelector("source").src = videoUrl;
-    videoPlayer.load();
+    const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Ejemplo de URL de YouTube
+    videoPlayer.src = videoUrl; // Actualizamos el iframe
 
     // Mostrar la ventana modal
     playerModal.style.display = "flex";
@@ -73,7 +72,7 @@ function openPlayerWithInfo(movieDetails) {
 
 // Cerrar el reproductor
 function closePlayerModal() {
-    videoPlayer.pause();
+    videoPlayer.src = ""; // Limpiar el iframe
     playerModal.style.display = "none";
     movieInfoContainer.innerHTML = ""; // Limpiar la información de la película
 }
