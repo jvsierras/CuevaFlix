@@ -3,34 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CuevaFlix - Películas en Línea</title>
+    <title>Reproductor de Videos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <!-- Título como enlace para regresar a la página principal -->
-        <a href="/" id="logo"><h1>CuevaFlix</h1></a>
-        <input type="text" id="search" placeholder="Buscar películas...">
-    </header>
-    <main>
-        <section id="featured">
-            <h2>Destacadas</h2>
-            <div class="movie-grid" id="featured-movies"></div>
-        </section>
-        <!-- Ventana modal para el reproductor y la información de la película -->
+    <div class="container">
+        <h1>Reproductor de Videos</h1>
+
+        <!-- Selector de Fuente -->
+        <label for="source-select">Selecciona una fuente:</label>
+        <select id="source-select">
+            <option value="multiembed">MultiEmbed</option>
+            <option value="vidsrc">VidSrc</option>
+            <option value="shorticu">Short.ICU</option>
+        </select>
+
+        <!-- Lista de Películas -->
+        <div id="movie-list"></div>
+
+        <!-- Reproductor de Video -->
         <div id="player-modal" class="modal">
             <div class="modal-content">
                 <span id="close-player" class="close">&times;</span>
-                <!-- Contenedor para la información de la película -->
-                <div id="movie-info"></div>
-                <!-- Reproductor de video usando iframe -->
+                <h2 id="movie-title"></h2>
+                <div id="movie-details">
+                    <img id="movie-poster" src="" alt="Poster de la película" />
+                    <p id="movie-overview"></p>
+                </div>
                 <iframe id="video-player" src="" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-    </main>
-    <footer>
-        <p>© 2025 CuevaFlix - Proyecto de ejemplo</p>
-    </footer>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
