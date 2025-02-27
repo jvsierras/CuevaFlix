@@ -1,5 +1,5 @@
 // Clave de API de TMDB (reemplázala con tu clave)
-const TMDB_API_KEY = "TU_CLAVE_DE_API_TMDB";
+const TMDB_API_KEY = "7787dd5dc689453346d1bca794089006";
 
 // Leer los IDs de IMDb desde el archivo
 const imdbIDs = `
