@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px; /* Aumenté el ancho para dar más espacio a los detalles */
     margin: 20px auto;
     padding: 20px;
     background: #fff;
@@ -20,26 +20,75 @@ h1 {
     color: #333;
 }
 
+/* Selector de fuente (ya presente en tu HTML) */
+label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+#source-select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
 /* Lista de películas */
 #movie-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px; /* Aumenté el gap para mejor separación */
     margin-top: 20px;
 }
 
 .movie-item {
-    background: #007bff;
-    color: #fff;
-    padding: 10px 15px;
+    background: #fff; /* Cambié el fondo azul a blanco para mejor legibilidad */
+    color: #333; /* Cambié el texto blanco a gris oscuro */
+    padding: 15px;
     border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background 0.3s ease;
+    border: 1px solid #ddd;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1000px; /* Límite máximo para no estirarse demasiado */
+    transition: box-shadow 0.3s ease;
 }
 
 .movie-item:hover {
-    background: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efecto hover más sutil */
+}
+
+.movie-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.movie-poster {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.movie-poster.clickable:hover {
+    opacity: 0.8;
+}
+
+.movie-details {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.movie-details h3 {
+    margin: 0 0 10px;
+    color: #007bff;
+}
+
+.movie-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
 }
 
 /* Modal del reproductor */
@@ -71,6 +120,7 @@ h1 {
     top: 5px;
     font-size: 24px;
     cursor: pointer;
+    color: #333;
 }
 
 iframe {
@@ -94,4 +144,25 @@ iframe {
     font-size: 14px;
     color: #555;
     text-align: justify;
+}
+
+.player-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.source-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.source-btn:hover {
+    background-color: #0056b3;
 }
