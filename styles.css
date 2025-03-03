@@ -165,4 +165,18 @@ iframe {
 
 .source-btn:hover {
     background-color: #0056b3;
+    
+.back-btn {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Gris para distinguirlo de los botones de fuente */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}
 }
